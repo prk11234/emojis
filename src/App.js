@@ -34,7 +34,7 @@ const App = (props) => {
       )
       }
       </div>
-      {<div style={{position: "fixed", zIndex:"3", right: "0px", bottom: "0px"}}><Pagination count={Math.ceil(props.data.length/10)} variant="outlined" color="primary" disabled = {!(inputText.length===0 && props.currentTreeLabel==="Default" )} onChange={(event, value) => { setPageInitial ((Number(value)-1)*10);setPageFinal((Number(value))*10)}}/></div>}
+      {<div style={{position: "fixed", zIndex:"3", right: "0px", bottom: "13px"}}><Pagination count={Math.ceil(props.data.length/10)} variant="outlined" color="primary" disabled = {!(inputText.length===0 && props.currentTreeLabel==="Default" )} onChange={(event, value) => { setPageInitial ((Number(value)-1)*10);setPageFinal((Number(value))*10)}}/></div>}
       <div>
       </div>
       </div>: <div style={{margin: '250px 600px'}}><CircularProgress size={120}/></div>}
