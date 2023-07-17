@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import ExpandLessIcon from '@mui/icons-material/ExpandLess'
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 
@@ -31,7 +32,7 @@ const CardComponent = (props) => {
   </div>
     </CardContent>
     <IconButton key ={props.v.htmlCode[0]} aria-label="delete" onClick={() => {setExpanded(props.v.htmlCode[0]);setExpandedSelect(!expandedSelect)}}>
-    <ExpandMoreIcon />
+    {!(props.v.htmlCode[0]===expanded && expandedSelect)?<ExpandMoreIcon />:<ExpandLessIcon />}
     </IconButton>
 <Collapse in={props.v.htmlCode[0]===expanded && expandedSelect} key ={props.v.htmlCode[0]} timeout="auto" unmountOnExit>
 <div style={{display: "flex", flexDirection:"column"}}>
